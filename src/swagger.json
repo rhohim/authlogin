@@ -1,0 +1,210 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Backend Test Case API",
+    "version": "1.0.0",
+    "description": "API documentation",
+    "contact": {
+      "name": "dull98's",
+      "url": "https://abdl-portfolio.vercel.app/",
+      "email": "abdl.rhohim@gmail.com"
+    }
+  },
+  "servers": [
+    {
+      "url": "http://localhost:8000"
+    }
+  ],
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    },
+    "schemas": {
+      "Category": {
+        "type": "object",
+        "properties": {
+          "category_name": {
+            "type": "string",
+            "description": "The name of the category"
+          }
+        },
+        "required": [
+          "category_name"
+        ]
+      },
+      "Client": {
+        "type": "object",
+        "properties": {
+          "client_name": {
+            "type": "string",
+            "description": "The name of the client"
+          },
+          "client_image": {
+            "type": "string",
+            "format": "binary",
+            "description": "The uploaded image file for the client"
+          }
+        },
+        "required": [
+          "client_name",
+          "client_image"
+        ]
+      },
+      "Portfolio": {
+        "type": "object",
+        "properties": {
+          "location": {
+            "type": "string",
+            "description": "The location of the portfolio item"
+          },
+          "area": {
+            "type": "string",
+            "description": "The area of the portfolio item"
+          },
+          "year": {
+            "type": "number",
+            "description": "The year of the portfolio item"
+          },
+          "cover": {
+            "type": "string",
+            "format": "binary",
+            "description": "The cover image file for the portfolio item"
+          },
+          "highlight": {
+            "type": "number",
+            "description": "The highlight value for the portfolio"
+          },
+          "copy_1": {
+            "type": "string",
+            "description": "Copy text for the portfolio (1 of 6)"
+          },
+          "copy_2": {
+            "type": "string",
+            "description": "Copy text for the portfolio (2 of 6)"
+          },
+          "copy_3": {
+            "type": "string",
+            "description": "Copy text for the portfolio (3 of 6)"
+          },
+          "copy_4": {
+            "type": "string",
+            "description": "Copy text for the portfolio (4 of 6)"
+          },
+          "copy_5": {
+            "type": "string",
+            "description": "Copy text for the portfolio (5 of 6)"
+          },
+          "copy_6": {
+            "type": "string",
+            "description": "Copy text for the portfolio (6 of 6)"
+          },
+          "image_1": {
+            "type": "string",
+            "format": "binary",
+            "description": "Image 1 for the portfolio item"
+          },
+          "image_2": {
+            "type": "string",
+            "format": "binary",
+            "description": "Image 2 for the portfolio item"
+          },
+          "image_3": {
+            "type": "string",
+            "format": "binary",
+            "description": "Image 3 for the portfolio item"
+          },
+          "image_4": {
+            "type": "string",
+            "format": "binary",
+            "description": "Image 4 for the portfolio item"
+          },
+          "image_5": {
+            "type": "string",
+            "format": "binary",
+            "description": "Image 5 for the portfolio item"
+          },
+          "image_6": {
+            "type": "string",
+            "format": "binary",
+            "description": "Image 6 for the portfolio item"
+          },
+          "image_7": {
+            "type": "string",
+            "format": "binary",
+            "description": "Image 7 for the portfolio item"
+          },
+          "image_8": {
+            "type": "string",
+            "format": "binary",
+            "description": "Image 8 for the portfolio item"
+          },
+          "image_9": {
+            "type": "string",
+            "format": "binary",
+            "description": "Image 9 for the portfolio item"
+          },
+          "image_10": {
+            "type": "string",
+            "format": "binary",
+            "description": "Image 10 for the portfolio item"
+          },
+          "image_11": {
+            "type": "string",
+            "format": "binary",
+            "description": "Image 11 for the portfolio item"
+          },
+          "image_12": {
+            "type": "string",
+            "format": "binary",
+            "description": "Image 12 for the portfolio item"
+          },
+          "category_1_id": {
+            "type": "number",
+            "description": "The first category ID reference"
+          },
+          "category_2_id": {
+            "type": "number",
+            "description": "The second category ID reference"
+          },
+          "category_3_id": {
+            "type": "number",
+            "description": "The third category ID reference"
+          },
+          "client_id": {
+            "type": "number",
+            "description": "The client ID reference"
+          }
+        },
+        "required": [
+          "location",
+          "area",
+          "year",
+          "cover",
+          "highlight",
+          "category_1_id",
+          "client_id"
+        ]
+      }
+    },
+    "tags": [
+      {
+        "name": "Category",
+        "description": "API for managing categories"
+      },
+      {
+        "name": "Client",
+        "description": "API for managing clients"
+      },
+      {
+        "name": "Portfolio",
+        "description": "API for managing portfolios"
+      }
+    ]
+  },
+  "paths": {},
+  "tags": []
+}
